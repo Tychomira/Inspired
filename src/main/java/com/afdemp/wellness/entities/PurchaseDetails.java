@@ -38,11 +38,11 @@ public class PurchaseDetails implements Serializable {
     @Basic(optional = false)
     private int quantity;
 
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "purchase_id", referencedColumnName = "id", nullable = false)
     private Purchase purchase;
     
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id", referencedColumnName = "id", nullable = false)
     private Product product;
 

@@ -55,7 +55,7 @@ public class Purchase implements Serializable {
     private List<PurchaseDetails> purchaseDetailsList;
   
     @JoinColumn(name = "customer_id", referencedColumnName = "id", nullable = false)
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Customer customer;
 
     public Purchase() {

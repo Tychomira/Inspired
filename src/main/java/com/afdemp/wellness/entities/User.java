@@ -49,7 +49,7 @@ public class User {
     private List<UserProfile> userProfileList;
 
     @JoinColumn(name = "customer_id", referencedColumnName = "id", nullable = false)
-    @ManyToOne(optional = false, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Customer customer;
 
 //    @ManyToOne(optional = false, fetch = FetchType.EAGER, cascade = CascadeType.ALL)

@@ -21,12 +21,12 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 @Table(name = "persistent_logins", catalog = "wellness2.0", schema = "")
 //@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "PersistentLogin.findAll", query = "SELECT p FROM PersistentLogin p")
-    , @NamedQuery(name = "PersistentLogin.findByUsername", query = "SELECT p FROM PersistentLogin p WHERE p.username = :username")
-    , @NamedQuery(name = "PersistentLogin.findBySeries", query = "SELECT p FROM PersistentLogin p WHERE p.series = :series")
-    , @NamedQuery(name = "PersistentLogin.findByToken", query = "SELECT p FROM PersistentLogin p WHERE p.token = :token")
-    , @NamedQuery(name = "PersistentLogin.findByLastUsed", query = "SELECT p FROM PersistentLogin p WHERE p.lastUsed = :lastUsed")})
+//@NamedQueries({
+//    @NamedQuery(name = "PersistentLogin.findAll", query = "SELECT p FROM PersistentLogin p")
+//    , @NamedQuery(name = "PersistentLogin.findByUsername", query = "SELECT p FROM PersistentLogin p WHERE p.username = :username")
+//    , @NamedQuery(name = "PersistentLogin.findBySeries", query = "SELECT p FROM PersistentLogin p WHERE p.series = :series")
+//    , @NamedQuery(name = "PersistentLogin.findByToken", query = "SELECT p FROM PersistentLogin p WHERE p.token = :token")
+//    , @NamedQuery(name = "PersistentLogin.findByLastUsed", query = "SELECT p FROM PersistentLogin p WHERE p.lastUsed = :lastUsed")})
 public class PersistentLogin implements Serializable {
 
     private static final long serialVersionUID = 1L;
